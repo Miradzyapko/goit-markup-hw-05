@@ -16,7 +16,7 @@
 --bg-color-icon-footer: #FFFFFF1A;
 --inher-border-color: #AFB1B8;
 --bgcolor-menu-work: #2F303ACC;
-
+--transition:250ms  cubic-bezier(0.4, 0, 0.2, 1);
 
 
 }
@@ -175,11 +175,7 @@ line-height:1.88 ;
 letter-spacing: 0.06em;
 text-align: center;
 padding: 10px 32px;
-transition-property: color, background-color;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-
+transition-property: color, background-color : var(--transition);
 }
 
 
@@ -322,7 +318,7 @@ align-items: center;
 border: 1px solid currentColor;
 border-radius: 4px;
 color:var(--inher-border-color);
-transition: color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+transition: color var(--transition);
 }
 .client-link:hover, .client-link:focus {color: var(--accent-color);}
 
@@ -407,7 +403,7 @@ padding: 63px 24px;
 
 
 
-.portfolio-item:hover .portfolio-img-text {transform: translateY(0);}
+.portfolio-link:hover .portfolio-img-text,.portfolio-link:focus .portfolio-img-text  {transform: translateY(0);}
 
 .portfolio-link:hover,.portfolio-link:focus {
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -438,7 +434,7 @@ line-height: 1.88;
 
 }
 .backdrop {width:100vw;
-height: 100vw;
+height: 100%;
 position: fixed;
 top: 0;
 background-color: rgba(157, 164,189, 0.62) ;
