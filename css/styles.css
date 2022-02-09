@@ -293,7 +293,7 @@ align-items: center;
 border-radius: 50% ;
 background-color:var(--bg-color-icon-footer);
 color:var(--inher-border-color);
-transition: background-color, color var(--transition);
+transition: background-color var(--transition), color var(--transition);
 }
 .social-item:not(:last-child) {margin-right: 10px;}
 
@@ -372,7 +372,8 @@ line-height: 1.63;
 font-size: 16px;
 letter-spacing: 0.03em;
 padding: 6px 22px;
-transition: color, background-color var(--transition);
+transition: color var(--transition), background-color var(--transition),
+box-shadow var(--transition) ;
 
 }
 .button-primary:hover,.button-primary:focus, .all {background-color: var(--bg-btn-color-primary);
@@ -394,7 +395,7 @@ line-height: 1.56;
 height: 294px;
 width: 100%;
 transform: translateY(100%);
-transition:var(--transition);
+transition:transform var(--transition);
 padding: 63px 24px;
 }
 
@@ -404,10 +405,11 @@ padding: 63px 24px;
 
 .portfolio-link:hover,.portfolio-link:focus {
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-background: var(--first-color);
+
 }
 .portfolio-link {display: flex;
-flex-direction: column;}
+flex-direction: column;
+transition:transform var(--transition);}
 
 
 
@@ -439,7 +441,7 @@ transition: opacity var(--transition),
 visibility var(--transition);
 
 }
-.backdrop .is-hidden .modal {transform: translate(-25%, -25%) scale(0.5); 
+.backdrop.is-hidden .modal {transform: translate(-50%, -50%) scale(0); 
 }
 .modal {width: 528px;
 height: 581px; 
@@ -449,7 +451,7 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%) scale(1);
-
+transition: var(--transition);
 
 }
 .modal-close { width: 30px;
